@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <body>
+    <div class="w3-container">
+      <h2>Đinh Thị Kim Lan</h2>
+      <p>2121050498</p>
+    </div>
+
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button" onclick="openCity('London')">
+        DCCTCT66_04C
+      </button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">
+        0766022474
+      </button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">
+        Đinh Thị Kim Lan
+      </button>
+    </div>
+
+    <div id="London" class="w3-container city">
+      <h2>Đinh Thị Kim Lan</h2>
+      <p>2121050498</p>
+    </div>
+
+    <div id="Paris" class="w3-container city" style="display: none">
+      <h2>Đinh Thị Kim Lan</h2>
+      <p>0766022474</p>
+    </div>
+
+    <div id="Tokyo" class="w3-container city" style="display: none">
+      <h2>Đinh Thị Kim Lan</h2>
+      <p>DCCTCT66_04C</p>
+    </div>
+
+    <script>
+      function openCity(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
