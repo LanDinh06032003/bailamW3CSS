@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <body>
+    <div class="w3-container">
+      <h2>Đinh Thị Kim Lan</h2>
+      <p>2121050498 - DCCTCT66_04C - 0766022474</p>
+
+      <input
+        class="w3-input w3-border w3-padding"
+        type="text"
+        placeholder="Search for names.."
+        id="myInput"
+        onkeyup="myFunction()"
+      />
+
+      <table class="w3-table-all w3-margin-top" id="myTable">
+        <tr>
+          <th style="width: 60%">ABC</th>
+          <th style="width: 40%">abc</th>
+        </tr>
+        <tr>
+          <td>Đinh Thị Kim Lan</td>
+          <td>2121050498</td>
+        </tr>
+        <tr>
+          <td>DCCTCT66_04C</td>
+          <td>0766022474</td>
+        </tr>
+      </table>
+
+      <p><strong>Tip: </strong>Đinh Thị Kim Lan - 2121050498</p>
+      <p>DCCTCT66_04C - 0766022474</p>
+    </div>
+
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
